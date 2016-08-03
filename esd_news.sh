@@ -17,6 +17,6 @@ if [ ! -e latest ] || [ ${href} != $(cat latest) ]; then
     "other" ) type="【その他情報】" ;;
     "stage" ) type="【舞台出演情報】" ;;
   esac 
-  kotoriotoko/BIN/tweet.sh ${type}" "${content}" "${URL}${href}
+  kotoriotoko/BIN/tweet.sh ${type}${content}" "${URL}${href}
   echo ${href} > latest
 fi
