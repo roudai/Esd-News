@@ -1,4 +1,5 @@
 #!/bin/sh
+sleep 5s
 cd $(dirname $0)
 URL="http://comic-earthstar.jp/esd/"
 href=$(curl -s ${URL}news.php | grep -m1 -B2 'class="new"' | sed -e '2,3d' | cut -f2 -d"\"")
